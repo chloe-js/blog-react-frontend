@@ -1,0 +1,101 @@
+* {
+  font-family: "Athabasca", sans-serif;
+  color: white;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #232324;
+}
+
+.width {
+  width: 100vw;
+}
+
+body {
+  display: flex;
+}
+.title {
+  font-family: "Alternity", sans-serif;
+}
+
+.main {
+  font-size: 150px;
+  color: #35b6b7;
+  margin-left: 5vw;
+}
+
+.main-holder {
+  display: flex;
+  background-color: #181818;
+  justify-content: center;
+  padding: 50px;
+  text-align: left;
+}
+
+.main-image {
+  max-width: 500px;
+}
+
+.main-title-holder {
+  width: 600px;
+  margin-right: 20px;
+}
+
+.main-title {
+  font-size: 50px;
+}
+
+.topbar-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.topbar-list-holder {
+  align-self: center;
+}
+
+.topbar {
+  display: flex;
+  background-color: #181818;
+  height: fit-content;
+  height: 20vh;
+  width: 100vw;
+}
+
+.slider-main {
+  display: flex;
+  overflow: scroll;
+}
+
+.slider-main-holder {
+  overflow: hidden;
+  padding: 30px;
+}
+
+.slider-main-image {
+  padding: 20px;
+  max-width: 300px;
+}
+
+.slider-individual {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.slider-text {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+span {
+  padding-left: 16px;
+  padding-right: 16px;
+}

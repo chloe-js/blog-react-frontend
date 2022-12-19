@@ -1,12 +1,12 @@
-import './App.css';
-import Appbar from './components/Appbar';
-import User from './components/User';
+import "./App.css";
+import "./MainContent.css";
+import Topbar from "./components/Topbar";
+import User from "./components/User";
 
 function App() {
   return (
-    <div className="App">
-<Appbar/>
-<User/>
+    <div>
+      <Topbar />
     </div>
   );
 }
