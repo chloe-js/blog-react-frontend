@@ -17,11 +17,15 @@ export default function MainContent({ posts }) {
               <p className="main-username">By {firstPost.name}</p>
             </div>
             <div className="time-holder">
-              <time className="time">19 December 2022</time>
+              <time className="time">Date</time>
             </div>
           </div>
           <div className="main-image-holder">
-            <img src={firstPost.imageSrc} className="main-image"></img>
+            <img
+              alt={firstPost.title + "image"}
+              src={firstPost.imageSrc}
+              className="main-image"
+            ></img>
           </div>
         </div>
       </article>

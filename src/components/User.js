@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { Container, Paper, Button } from "@material-ui/core";
-
+import { useNavigate } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function User() {
+  const navigate = useNavigate();
   // padding around the username and user review
   const paperStyle = {
     padding: "50px 20px",
@@ -44,6 +45,7 @@ export default function User() {
       .then((response) => response.json())
       .then((data) => {
         onNewPost(data);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

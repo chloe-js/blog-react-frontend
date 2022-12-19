@@ -1,21 +1,31 @@
 export default function Slider({ posts }) {
-  console.log(posts);
+  const postsReversed = posts.slice().reverse();
   return (
     <section className="slider-section">
       <div className="slider-main-holder">
         <div className="slider-main">
-          {posts.map((post, i) => {
-            return i !== posts.length - 1 ? (
-              <div className="slider-individual">
+          {postsReversed.map((post, i) => {
+            return i !== 0 ? (
+              <div key={i} className="slider-individual">
                 <div className="slider-text">
-                  <h2>{post.title}</h2>
-                  <a>{post.name}</a>
-                  <a>date</a>
+                  <div>
+                    <h2>{post.title}</h2>
+                  </div>
+                  <div>
+                    <p>{post.name}</p>
+                  </div>
+                  <div>
+                    <time>date</time>
+                  </div>
                 </div>
-                <img className="slider-main-image" src={post.imageSrc}></img>
+                <img
+                  alt={post.title + "image"}
+                  className="slider-main-image"
+                  src={post.imageSrc}
+                ></img>
               </div>
             ) : (
-              <></>
+              <div key={i}></div>
             );
           })}
         </div>
