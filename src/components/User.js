@@ -109,34 +109,6 @@ export default function User() {
           </Button>
         </form>
       </Paper>
-      <h1>Reviews</h1>
-      {/* to display the data from the useEffect */}
-      <Paper elevation={3} style={paperStyle}>
-        {posts.map((user) => (
-          // each post we will be adding style
-          <Paper
-            elevation={6}
-            style={{ margin: "10px", padding: "15px", textAlign: "left" }}
-            key={user.id}
-          >
-            {/* ID:{user.id}<br/> */}
-            Img:{" "}
-            <img
-              src={user.imageSrc}
-              alt={`Image of ${user.title}`}
-              style={{ width: "300px", display: "block" }}
-            ></img>
-            Title:{user.title}
-            <br />
-            Review:{user.review}
-            <br />
-            Reviewed By:{user.name}
-          </Paper>
-        ))}
-      </Paper>
-      {/* to see if it is storing or not */}
-      {/* {name}
-                {review} */}
     </Container>
   );
 }

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 import Homepage from "./Homepage";
 import User from "./User";
-export default function Topbar({ posts }) {
+export default function Topbar() {
   return (
     <BrowserRouter>
       <div className="topbar-holder">
