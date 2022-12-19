@@ -14,10 +14,10 @@ export default function MainContent({ posts }) {
               <h1 className="main-title">{firstPost.title}</h1>
             </div>
             <div className="username-holder">
-              <p className="main-username">By {firstPost.name}</p>
+              <p className="-username">By {firstPost.name}</p>
             </div>
-            <div className="time-holder">
-              <time className="time">Date</time>
+            <div className="date-holder">
+              <time className="-date">Date</time>
             </div>
           </div>
           <div className="main-image-holder">

@@ -12,10 +12,10 @@ export default function Slider({ posts }) {
                     <h2 className="slider-title">{post.title}</h2>
                   </div>
                   <div>
-                    <p>{post.name}</p>
+                    <p className="-username">{post.name}</p>
                   </div>
                   <div>
-                    <time>date</time>
+                    <time className="-date">date</time>
                   </div>
                 </div>
                 <img
