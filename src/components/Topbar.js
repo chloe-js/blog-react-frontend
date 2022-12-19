@@ -2,7 +2,7 @@ import "../MainContent.css";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 import Homepage from "./Homepage";
-import User from "./User";
+import CreateBlog from "./CreateBlog";
 export default function Topbar() {
   return (
     <BrowserRouter>
@@ -26,7 +26,7 @@ export default function Topbar() {
       </div>
       <Routes>
         <Route exact path="/" element={<Homepage />}></Route>
-        <Route exact path="/create" element={<User />}></Route>
+        <Route exact path="/create" element={<CreateBlog />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -9,7 +9,7 @@ export default function Slider({ posts }) {
               <div key={i} className="slider-individual">
                 <div className="slider-text">
                   <div>
-                    <h2>{post.title}</h2>
+                    <h2 className="slider-title">{post.title}</h2>
                   </div>
                   <div>
                     <p>{post.name}</p>
