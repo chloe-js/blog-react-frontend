@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 import Homepage from "./Homepage";
 import CreateBlog from "./CreateBlog";
+import EditBlog from "./EditBlog";
 export default function Topbar() {
   return (
     <BrowserRouter>
@@ -32,6 +33,7 @@ export default function Topbar() {
           path="/article/:articleId"
           element={<CreateBlog />}
         ></Route>
+        <Route exact path="/edit/:articleId" element={<EditBlog />}></Route>
       </Routes>
     </BrowserRouter>
   );

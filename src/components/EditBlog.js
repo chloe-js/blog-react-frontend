@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-export default function CreateBlog() {
+export default function EditBlog() {
   const navigate = useNavigate();
   // padding around the username and user review
   // add useState == to be controlled add value={name} in textField
@@ -9,21 +9,30 @@ export default function CreateBlog() {
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [imageSrc, setImageSrc] = useState("");
+  const { articleId } = useParams();
 
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
-  const [posts, setPosts] = useState([]);
-  /*for Damien to work with
-  const [post, setPost] = useState("");
-  const { articleId } = useParams();
+
   useEffect(() => {
     fetch(`http://localhost:8080/user/${articleId}`)
       .then((res) => res.json())
       .then((result) => {
-        //console.log(result);
-        setPost(result);
+        setName(result.name);
+        setImageSrc(result.imageSrc);
+        setTitle(result.title);
+        setReview(result.review);
       });
   }, []);
-  */
+
+  const handleDelete = () => {
+    fetch(`http://localhost:8080/user/${articleId}`, {
+      method: "DELETE",
+    }).then((result) => {
+      console.log(result);
+      navigate("/");
+      //setPost(result);
+    });
+  };
 
   // pass the event and prevent default value and print name and address to the console
   const handleSubmit = (e) => {
@@ -32,14 +41,13 @@ export default function CreateBlog() {
     //console.log(user);
     //save this data into the database === springboot application and xampp server and run. this route (localhost:8080/user/add) saves the data and we can use this to access it in our app
     // using the api call from react === need FETCH(azure library) !!!! CORS will block communication between local hosts === UserController in Java === @CrossOrigin //this will tell springboot application to connect to other applications
-    fetch("http://localhost:8080/user/add", {
-      method: "POST",
+    fetch(`http://localhost:8080/user/${articleId}`, {
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user), // converts JS object to JSON string
     })
-      .then((response) => response.json())
       .then((data) => {
-        onNewPost(data);
+        console.log(data);
         navigate("/");
       })
       .catch((error) => {
@@ -47,17 +55,6 @@ export default function CreateBlog() {
       });
   };
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
-  useEffect(() => {
-    fetch("http://localhost:8080/user/getAll")
-      .then((res) => res.json())
-      .then((result) => {
-        setPosts(result);
-      });
-  }, []);
-
-  function onNewPost(post) {
-    setPosts([...posts, post]);
-  }
 
   return (
     <div className="form-outside">
@@ -114,6 +111,12 @@ export default function CreateBlog() {
               type="button"
             ></input>
             <input className="form-submit -button" type="submit"></input>
+            <input
+              value="Delete"
+              onClick={handleDelete}
+              className="form-delete -button"
+              type="button"
+            ></input>
           </div>
         </form>
       </section>

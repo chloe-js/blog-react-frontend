@@ -173,6 +173,7 @@ span {
 }
 
 .-button {
+  z-index: 2;
   margin-left: 20px;
   width: 80px;
   height: 40px;
@@ -191,6 +192,11 @@ span {
   background-color: rgba(0, 0, 0, 0);
   border: solid 1px #35b6b7;
   color: #35b6b7;
+}
+
+.form-delete {
+  background-color: #d92232;
+  color: #232324;
 }
 
 input {
@@ -251,4 +257,13 @@ button:focus {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+.edit {
+  color: #35b6b7;
+  margin-left: 45%;
+}
+
+.edit:hover {
+  color: #227676;
 }
