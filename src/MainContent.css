@@ -267,3 +267,10 @@ button:focus {
 .edit:hover {
   color: #227676;
 }
+
+.-main {
+  color: #35b6b7;
+  align-self: flex-end;
+  margin-left: -50px;
+  padding-bottom: 15px;
+}

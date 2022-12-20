@@ -31,11 +31,9 @@ export default function MainContent({ posts }) {
                       minute: "2-digit",
                     })}
                 </time>
-                <Link to={"/edit/" + firstPost.id} className="edit">
-                  Edit
-                </Link>
               </div>
             </div>
+
             <div className="main-image-holder">
               <img
                 alt={firstPost.title + " image"}
@@ -43,6 +41,9 @@ export default function MainContent({ posts }) {
                 className="main-image"
               ></img>
             </div>
+            <Link to={"/edit/" + firstPost.id} className="-main">
+              Edit
+            </Link>
           </Link>
         </article>
       ) : (

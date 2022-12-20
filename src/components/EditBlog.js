@@ -27,10 +27,8 @@ export default function EditBlog() {
   const handleDelete = () => {
     fetch(`http://localhost:8080/user/${articleId}`, {
       method: "DELETE",
-    }).then((result) => {
-      console.log(result);
+    }).then(() => {
       navigate("/");
-      //setPost(result);
     });
   };
 
