@@ -17,11 +17,12 @@ export default function Student() {
     // add useState == to be controlled add value={name} in textField
     const [title, setTitle] = useState('');
     const [name, setName] = useState('');
+    // const [lastUpdate, setLastUpdate] = useState('');
     const [review, setReview] = useState('');
     const [imageSrc, setImageSrc] = useState('');
     // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
-    const [posts,setPosts]=useState([])
-
+    const [posts, setPosts] = useState([])
+    
     // pass the event and prevent default value and print name and address to the console
     const classes = useStyles();
     const handleClick = (e) => {
@@ -39,15 +40,24 @@ export default function Student() {
             console.log("New User Added");
         })
     }
+
+    ///split timestap for time and date
+    const dateAndTime = posts.map(rawTimeAndDate => rawTimeAndDate.lastUpdate)
+    let formattedDateAndTimeArray = [];
+    dateAndTime.forEach(arr => { 
+        const dateValues = arr.split('T')
+        dateValues[1] = dateValues[1].slice(0, 5)
+        formattedDateAndTimeArray.push(dateValues) 
+    })
     // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
-useEffect(()=>{
-    fetch("http://localhost:8080/user/getAll")
-    .then(res=>res.json())
-    .then((result)=>{
-        setPosts(result);
-    }
-)
-},[])
+    useEffect(() => {
+        fetch("http://localhost:8080/user/getAll")
+            .then(res => res.json())
+            .then((result) => {
+                setPosts(result);
+            }
+            )
+    }, [])
 
     return (
         <Container>
@@ -64,31 +74,35 @@ useEffect(()=>{
                     />
                     <TextField id="outlined-basic" label="User Image Source" variant="outlined" fullWidth value={imageSrc} onChange={(e) => setImageSrc(e.target.value)}
                     />
+                    {/* <TextField id="outlined-basic" label="last update" variant="outlined" fullWidth value={lastUpdate} onChange={(e) => setLastUpdate(e.target.value)}
+                    /> */}
                     {/* add on click event when post it will get and add the data === add handleClick function above return*/}
                     <Button variant="contained" color="secondary" onClick={handleClick}>Post Review</Button>
                 </form>
 
             </Paper>
-        <h1>Reviews</h1>
-                {/* to display the data from the useEffect */}
-                <Paper elevation={3} style={paperStyle}>
-                    {posts.map(user=>(
-                        // each post we will be adding style
-                        <Paper elevation={6} style={{margin:"10px", padding:"15px", textAlign:"left"}} key={user.id}>
-                            {/* ID:{user.id}<br/> */}
-                            Img: <img src={user.imageSrc} alt={`Image of ${user.title}`} style={{width: "300px", display: "block"}}></img>
-                            Title:{user.title}<br/>
-                            Review:{user.review}<br/>
-                            Reviewed By:{user.name}
-                        </Paper>
-                    ))
-                    }
+            <h1>Reviews</h1>
+            {/* to display the data from the useEffect */}
+            <Paper elevation={3} style={paperStyle}>
+                {posts.map((user, index) => (
 
-                </Paper>
-                {/* to see if it is storing or not */}
-                {/* {name}
+                    // each post we will be adding style
+                    <Paper elevation={6} style={{ margin: "10px", padding: "15px", textAlign: "left" }} key={user.id}>
+                        {/* ID:{user.id}<br/> */}
+                        Img: <img src={user.imageSrc} alt={`Image of ${user.title}`} style={{ width: "300px", display: "block" }}></img>
+                        Title:{user.title}<br />
+                        Review:{user.review}<br />
+                        Reviewed By:{user.name}<br />
+                        Review Date:{formattedDateAndTimeArray[index][0]}
+                        <span style={{display: "block"}}>Review Time:{formattedDateAndTimeArray[index][1]}</span>
+                    </Paper>
+                ))
+                }
+
+            </Paper>
+            {/* to see if it is storing or not */}
+            {/* {name}
                 {review} */}
         </Container>
     );
 }
-
