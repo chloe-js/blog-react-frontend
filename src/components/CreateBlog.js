@@ -43,8 +43,6 @@ export default function CreateBlog() {
       });
   }, []);
 
-  console.log(paraId);
-
   function onNewPost(post) {
     setPosts([...posts, post]);
   }

@@ -12,6 +12,7 @@ export default function Homepage() {
         setPosts(result);
       });
   }, []);
+
   return (
     <div className="width">
       <MainContent posts={posts} />

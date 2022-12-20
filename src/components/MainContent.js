@@ -18,7 +18,18 @@ export default function MainContent({ posts }) {
               <p className="-username">By {firstPost.name}</p>
             </div>
             <div className="date-holder">
-              <time className="-date">Date</time>
+              <time className="-date">
+                {new Date(firstPost.lastUpdate).toLocaleDateString("en-GB", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }) +
+                  " " +
+                  new Date(firstPost.lastUpdate).toLocaleTimeString("en-GB", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+              </time>
             </div>
           </div>
           <div className="main-image-holder">
