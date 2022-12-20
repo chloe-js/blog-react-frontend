@@ -1,5 +1,6 @@
 import "../MainContent.css";
 
+import { Link } from "react-router-dom";
 export default function MainContent({ posts }) {
   let firstPost;
   if (posts.length !== 0) {
@@ -8,7 +9,7 @@ export default function MainContent({ posts }) {
   return (
     <div>
       <article>
-        <div className="main-holder">
+        <Link to={"/article/" + firstPost.id} className="main-holder">
           <div>
             <div className="main-title-holder">
               <h1 className="main-title">{firstPost.title}</h1>
@@ -27,7 +28,7 @@ export default function MainContent({ posts }) {
               className="main-image"
             ></img>
           </div>
-        </div>
+        </Link>
       </article>
     </div>
   );

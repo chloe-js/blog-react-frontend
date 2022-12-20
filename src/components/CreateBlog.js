@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function CreateBlog() {
   const navigate = useNavigate();
@@ -12,6 +12,7 @@ export default function CreateBlog() {
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
   const [posts, setPosts] = useState([]);
 
+  let { id: paraId } = useParams();
   // pass the event and prevent default value and print name and address to the console
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,6 +42,8 @@ export default function CreateBlog() {
         setPosts(result);
       });
   }, []);
+
+  console.log(paraId);
 
   function onNewPost(post) {
     setPosts([...posts, post]);

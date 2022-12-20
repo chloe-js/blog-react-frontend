@@ -27,6 +27,7 @@ export default function Topbar() {
       <Routes>
         <Route exact path="/" element={<Homepage />}></Route>
         <Route exact path="/create" element={<CreateBlog />}></Route>
+        <Route exact path="/article/:id" element={<CreateBlog />}></Route>
       </Routes>
     </BrowserRouter>
   );

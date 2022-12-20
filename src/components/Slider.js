@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Slider({ posts }) {
   const postsReversed = posts.slice().reverse();
   return (
@@ -6,7 +8,11 @@ export default function Slider({ posts }) {
         <div className="slider-main">
           {postsReversed.map((post, i) => {
             return i !== 0 ? (
-              <div key={i} className="slider-individual">
+              <Link
+                key={i}
+                to={"/article/" + post.id}
+                className="slider-individual"
+              >
                 <div className="slider-text">
                   <div>
                     <h2 className="slider-title">{post.title}</h2>
@@ -23,7 +29,7 @@ export default function Slider({ posts }) {
                   className="slider-main-image"
                   src={post.imageSrc}
                 ></img>
-              </div>
+              </Link>
             ) : (
               <div key={i}></div>
             );
