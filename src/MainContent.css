@@ -1,7 +1,7 @@
 * {
   font-family: "Athabasca", sans-serif;
-  color: white;
   box-sizing: content-box;
+  color: white;
 }
 
 body {
@@ -22,7 +22,20 @@ body {
 .main {
   font-size: 150px;
   color: #35b6b7;
-  margin-left: 5vw;
+  margin-top: -44px;
+  margin-bottom: -20px;
+}
+
+ul {
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px !important;
+}
+
+.home {
+  font-size: 25px;
 }
 
 .main-holder {
@@ -53,22 +66,29 @@ body {
   flex-direction: row;
   list-style: none;
   color: white;
+  align-items: center;
 }
 
 a:link {
   text-decoration: none;
 }
 
+a:hover {
+  color: #2f2f30;
+}
+
 .topbar-list-holder {
   align-self: center;
+  margin-left: -50px;
 }
 
 .topbar {
   display: flex;
   background-color: #181818;
   height: fit-content;
-  height: 20vh;
+  height: 10vh;
   width: 100vw;
+  padding-bottom: 5vh;
 }
 
 .slider-main {
@@ -216,4 +236,10 @@ button:focus {
 
 .-username {
   color: #79797a;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }

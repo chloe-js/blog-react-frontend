@@ -8,7 +8,7 @@ export default function Topbar() {
     <BrowserRouter>
       <div className="topbar-holder">
         <div className="topbar">
-          <div className="title main">bitBYTEbit</div>
+          <div className="title main prevent-select">bitBYTEbit</div>
           <nav className="topbar-list-holder">
             <ul className="topbar-list">
               <li>
