@@ -19,7 +19,7 @@ export default function Slider({ posts }) {
                   </div>
                 </div>
                 <img
-                  alt={post.title + "image"}
+                  alt={post.title + " image"}
                   className="slider-main-image"
                   src={post.imageSrc}
                 ></img>

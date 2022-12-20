@@ -22,7 +22,7 @@ export default function MainContent({ posts }) {
           </div>
           <div className="main-image-holder">
             <img
-              alt={firstPost.title + "image"}
+              alt={firstPost.title + " image"}
               src={firstPost.imageSrc}
               className="main-image"
             ></img>
