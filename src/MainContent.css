@@ -76,7 +76,7 @@ a:link {
 }
 
 a:hover {
-  color: #2f2f30;
+  color: #6b6b6d;
 }
 
 .topbar-list-holder {
@@ -125,10 +125,12 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
+
 .slider-title {
   max-width: 500px;
   color: white;
 }
+
 .slider-text {
   max-width: 500px;
   display: flex;
@@ -188,15 +190,27 @@ span {
   color: #232324;
 }
 
+.form-submit:hover {
+  background-color: #227676;
+}
+
 .form-preview {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #232324;
   border: solid 1px #35b6b7;
   color: #35b6b7;
+}
+
+.form-preview:hover {
+  background-color: #000000;
 }
 
 .form-delete {
   background-color: #d92232;
   color: #232324;
+}
+
+.form-delete:hover {
+  background-color: #931621;
 }
 
 input {

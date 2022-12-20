@@ -37,14 +37,12 @@ export default function Slider({ posts }) {
                   <div>
                     <h2 className="slider-title">{post.title}</h2>
                   </div>
-
                   <div className="slider-text">
                     <div>
                       <p className="-username">{post.name}</p>
                       <time className="-date">
                         {formattedDateAndTimeArray[i]}
                       </time>
-
                       <Link to={"/edit/" + post.id} className="edit">
                         Edit
                       </Link>
