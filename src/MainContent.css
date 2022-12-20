@@ -274,3 +274,7 @@ button:focus {
   margin-left: -50px;
   padding-bottom: 15px;
 }
+
+.-main:hover {
+  color: #227676;
+}
