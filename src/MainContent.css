@@ -22,6 +22,7 @@ body {
 .main {
   font-size: 150px;
   color: #35b6b7;
+  margin-left: 10vw;
   margin-top: -44px;
   margin-bottom: -20px;
 }
@@ -138,7 +139,7 @@ span {
 }
 
 .form-holder {
-  width: 90vw;
+  width: 80vw;
   display: flex;
   justify-content: center;
   background-color: #232324;
