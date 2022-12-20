@@ -26,28 +26,29 @@ export default function Slider({ posts }) {
           {postsReversed.map((post, i) => {
             return i !== 0 ? (
               <div key={i} className="slider-individual">
+                <Link to={"/article/" + post.id}>
+                  <img
+                    alt={post.title + " image"}
+                    className="slider-main-image"
+                    src={post.imageSrc}
+                  ></img>
+                </Link>
                 <div>
-                  <Link to={"/article/" + post.id}>
-                    <img
-                      alt={post.title + " image"}
-                      className="slider-main-image"
-                      src={post.imageSrc}
-                    ></img>
-                  </Link>
                   <div>
                     <h2 className="slider-title">{post.title}</h2>
                   </div>
-                </div>
-                <div className="slider-text">
-                  <div>
-                    <p className="-username">{post.name}</p>
-                    <time className="-date">
-                      {formattedDateAndTimeArray[i]}
-                    </time>
 
-                    <Link to={"/edit/" + post.id} className="edit">
-                      Edit
-                    </Link>
+                  <div className="slider-text">
+                    <div>
+                      <p className="-username">{post.name}</p>
+                      <time className="-date">
+                        {formattedDateAndTimeArray[i]}
+                      </time>
+
+                      <Link to={"/edit/" + post.id} className="edit">
+                        Edit
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
