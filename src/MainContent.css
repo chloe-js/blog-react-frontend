@@ -20,6 +20,7 @@ body {
 }
 
 .main {
+  position: absolute;
   font-size: 150px;
   color: #35b6b7;
   margin-left: 10vw;
@@ -80,13 +81,18 @@ a:hover {
 
 .topbar-list-holder {
   align-self: center;
-  margin-left: -50px;
+  margin-left: calc(71vw - 250px);
+  z-index: 2;
 }
 
 .topbar {
   display: flex;
+  width: 80vw;
+}
+
+.topbar-holder {
+  display: flex;
   background-color: #181818;
-  height: fit-content;
   height: 10vh;
   width: 100vw;
   padding-bottom: 5vh;

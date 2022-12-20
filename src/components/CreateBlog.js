@@ -12,7 +12,8 @@ export default function CreateBlog() {
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
   const [posts, setPosts] = useState([]);
 
-  let { id: paraId } = useParams();
+  const { articleId } = useParams();
+  console.log(articleId);
   // pass the event and prevent default value and print name and address to the console
   const handleSubmit = (e) => {
     e.preventDefault();
