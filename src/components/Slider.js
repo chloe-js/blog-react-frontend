@@ -30,13 +30,15 @@ export default function Slider({ posts }) {
                 to={"/article/" + post.id}
                 className="slider-individual"
               >
-                <img
-                  alt={post.title + " image"}
-                  className="slider-main-image"
-                  src={post.imageSrc}
-                ></img>
                 <div>
-                  <h2 className="slider-title">{post.title}</h2>
+                  <img
+                    alt={post.title + " image"}
+                    className="slider-main-image"
+                    src={post.imageSrc}
+                  ></img>
+                  <div>
+                    <h2 className="slider-title">{post.title}</h2>
+                  </div>
                 </div>
                 <div className="slider-text">
                   <div>
