@@ -338,8 +338,6 @@ button:focus {
   position: absolute;
   left: 90%;
   top: 5%;
-  width: fit-content;
-  height: 20px;
   color: #35b6b7;
   background: none;
   border: none;
@@ -352,10 +350,18 @@ button:focus {
   top: 0%;
   font-size: 60px;
   color: #989696;
+  background: none;
+  border: none;
+}
+
+.big-button:hover {
+  color: #565555;
+  cursor: pointer;
 }
 
 .x-button:hover {
   cursor: pointer;
+  color: #278484;
 }
 
 .newsletter-title {
