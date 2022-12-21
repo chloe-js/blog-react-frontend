@@ -69,7 +69,7 @@ const Blogs = ({ props }) => {
                 })}
               </time>
               <br></br>
-              <time className="-time">
+              <time className="-date">
                 {new Date(Date.now()).toLocaleTimeString("en-GB", {
                   hour: "2-digit",
                   minute: "2-digit",
