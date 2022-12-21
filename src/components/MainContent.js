@@ -26,12 +26,7 @@ export default function MainContent({ posts }) {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
-                  }) +
-                    " " +
-                    new Date(firstPost.lastUpdate).toLocaleTimeString("en-GB", {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })}
+                  })}
                 </time>
               </div>
             </div>

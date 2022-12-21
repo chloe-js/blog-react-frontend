@@ -10,12 +10,7 @@ export default function Slider({ posts }) {
         year: "numeric",
         month: "long",
         day: "numeric",
-      }) +
-        " " +
-        new Date(post.lastUpdate).toLocaleTimeString("en-GB", {
-          hour: "2-digit",
-          minute: "2-digit",
-        })
+      })
     );
   });
 

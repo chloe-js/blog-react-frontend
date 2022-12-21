@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Preview from "./Preview";
 
 export default function CreateBlog() {
   const navigate = useNavigate();
@@ -9,27 +10,21 @@ export default function CreateBlog() {
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [imageSrc, setImageSrc] = useState("");
+  const [post, setPost] = useState("");
+  const [open, setOpen] = useState(false);
 
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
   const [posts, setPosts] = useState([]);
-  /*for Damien to work with
-  const [post, setPost] = useState("");
-  const { articleId } = useParams();
-  useEffect(() => {
-    fetch(`http://localhost:8080/user/${articleId}`)
-      .then((res) => res.json())
-      .then((result) => {
-        //console.log(result);
-        setPost(result);
-      });
-  }, []);
-  */
+
+  function onPreview() {
+    const prop = { title, name, review, imageSrc };
+    setPost(prop);
+  }
 
   // pass the event and prevent default value and print name and address to the console
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { name, review, title, imageSrc };
-    //console.log(user);
     //save this data into the database === springboot application and xampp server and run. this route (localhost:8080/user/add) saves the data and we can use this to access it in our app
     // using the api call from react === need FETCH(azure library) !!!! CORS will block communication between local hosts === UserController in Java === @CrossOrigin //this will tell springboot application to connect to other applications
     fetch("http://localhost:8080/user/add", {
@@ -108,11 +103,7 @@ export default function CreateBlog() {
             ></input>
           </div>
           <div className="form-breaker buttons">
-            <input
-              value="Preview"
-              className="form-preview -button"
-              type="button"
-            ></input>
+            <Preview props={post} />
             <input className="form-submit -button" type="submit"></input>
           </div>
         </form>

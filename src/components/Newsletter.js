@@ -7,6 +7,8 @@ export default function Newsletter() {
     setIsOpen(false);
   }
 
+  //openmodel function
+
   return (
     isOpen && (
       //    <div className="newsletter-page">
@@ -25,7 +27,6 @@ export default function Newsletter() {
                 placeholder="Email Address"
                 className="newsletter-email"
               ></input>
-
               <input
                 type="submit"
                 className="form-submit button-small"

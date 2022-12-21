@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Preview from "./Preview";
 
 export default function EditBlog() {
   const navigate = useNavigate();
@@ -36,7 +37,6 @@ export default function EditBlog() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { name, review, title, imageSrc };
-    //console.log(user);
     //save this data into the database === springboot application and xampp server and run. this route (localhost:8080/user/add) saves the data and we can use this to access it in our app
     // using the api call from react === need FETCH(azure library) !!!! CORS will block communication between local hosts === UserController in Java === @CrossOrigin //this will tell springboot application to connect to other applications
     fetch(`http://localhost:8080/user/${articleId}`, {
@@ -103,11 +103,7 @@ export default function EditBlog() {
             ></input>
           </div>
           <div className="form-breaker buttons">
-            <input
-              value="Preview"
-              className="form-preview -button"
-              type="button"
-            ></input>
+            <Preview />
             <input className="form-submit -button" type="submit"></input>
             <input
               value="Delete"
