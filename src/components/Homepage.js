@@ -1,6 +1,7 @@
 import MainContent from "./MainContent";
 import Slider from "./Slider";
 import React, { useState, useEffect } from "react";
+import Newsletter from "./Newsletter";
 
 export default function Homepage() {
   const [posts, setPosts] = useState([]);
@@ -15,6 +16,7 @@ export default function Homepage() {
 
   return (
     <div className="width">
+      <Newsletter />
       <MainContent posts={posts} />
       <Slider posts={posts} />
     </div>

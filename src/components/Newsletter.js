@@ -20,7 +20,7 @@ export default function Newsletter() {
           <div>
             <h1 className="newsletter-title">Subscribe to our Newsletter</h1>
           </div>
-          <div>
+          <div className="newsletter-form-holder">
             <form className="newsletter-form">
               <input
                 type="text"
