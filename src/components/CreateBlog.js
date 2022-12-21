@@ -11,7 +11,6 @@ export default function CreateBlog() {
   const [review, setReview] = useState("");
   const [imageSrc, setImageSrc] = useState("");
   const [post, setPost] = useState("");
-  const [open, setOpen] = useState(false);
 
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
   const [posts, setPosts] = useState([]);
@@ -57,7 +56,13 @@ export default function CreateBlog() {
   return (
     <div className="form-outside">
       <section className="form-holder">
-        <form className="form" onSubmit={handleSubmit}>
+        <form
+          className="form"
+          onSubmit={handleSubmit}
+          onClick={() => {
+            onPreview();
+          }}
+        >
           <div className="form-breaker">
             <input
               type="text"

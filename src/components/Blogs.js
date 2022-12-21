@@ -60,7 +60,7 @@ const Blogs = ({ props }) => {
               <h1 className="blog-title">{props.title}</h1>
               <h2 className="blog-user">{props.name}</h2>
               <time className="-date">
-                {new Date(props.lastUpdate).toLocaleDateString("en-GB", {
+                {new Date(Date.now()).toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
@@ -68,7 +68,7 @@ const Blogs = ({ props }) => {
               </time>
               <br></br>
               <time className="-time">
-                {new Date(props.lastUpdate).toLocaleTimeString("en-GB", {
+                {new Date(Date.now()).toLocaleTimeString("en-GB", {
                   hour: "2-digit",
                   minute: "2-digit",
                 })}

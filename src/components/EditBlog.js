@@ -10,6 +10,7 @@ export default function EditBlog() {
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [imageSrc, setImageSrc] = useState("");
+  const [post, setPost] = useState("");
   const { articleId } = useParams();
 
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
@@ -33,6 +34,10 @@ export default function EditBlog() {
     });
   };
 
+  function onPreview() {
+    const prop = { title, name, review, imageSrc };
+    setPost(prop);
+  }
   // pass the event and prevent default value and print name and address to the console
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,7 +62,13 @@ export default function EditBlog() {
   return (
     <div className="form-outside">
       <section className="form-holder">
-        <form className="form" onSubmit={handleSubmit}>
+        <form
+          className="form"
+          onSubmit={handleSubmit}
+          onClick={() => {
+            onPreview();
+          }}
+        >
           <div className="form-breaker">
             <input
               type="text"
@@ -103,7 +114,7 @@ export default function EditBlog() {
             ></input>
           </div>
           <div className="form-breaker buttons">
-            <Preview />
+            <Preview props={post} />
             <input className="form-submit -button" type="submit"></input>
             <input
               value="Delete"

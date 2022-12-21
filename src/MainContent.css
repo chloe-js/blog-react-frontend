@@ -280,7 +280,7 @@ button:focus {
 
 .edit {
   color: #35b6b7;
-  margin-left: 45%;
+  margin-left: 82%;
 }
 
 .edit:hover {
@@ -347,12 +347,11 @@ button:focus {
 }
 
 .big-button {
+  position: absolute;
   left: 95%;
   top: 0%;
   font-size: 60px;
   color: #989696;
-  width: 20px;
-  height: 20px;
 }
 
 .x-button:hover {
