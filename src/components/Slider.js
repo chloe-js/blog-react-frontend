@@ -27,23 +27,24 @@ export default function Slider({ posts }) {
                     className="slider-main-image"
                     src={post.imageSrc}
                   ></img>
-                </Link>
-                <div>
+
                   <div>
-                    <h2 className="slider-title">{post.title}</h2>
-                  </div>
-                  <div className="slider-text">
                     <div>
-                      <p className="-username">By {post.name}</p>
-                      <time className="-date">
-                        {formattedDateAndTimeArray[i]}
-                      </time>
-                      <Link to={"/edit/" + post.id} className="edit">
-                        Edit
-                      </Link>
+                      <h2 className="slider-title">{post.title}</h2>
+                    </div>
+                    <div className="slider-text">
+                      <div>
+                        <p className="-username">By {post.name}</p>
+                        <time className="-date">
+                          {formattedDateAndTimeArray[i]}
+                        </time>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
+                <Link to={"/edit/" + post.id} className="edit">
+                  Edit
+                </Link>
               </div>
             ) : (
               <div key={i}></div>
