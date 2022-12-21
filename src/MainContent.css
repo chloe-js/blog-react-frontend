@@ -346,9 +346,9 @@ button:focus {
 
 .big-button {
   position: absolute;
-  left: calc(100% - 80px);
-  top: 0%;
-  font-size: 60px;
+  left: calc(100% - 60px);
+  top: 5px;
+  font-size: 40px;
   color: #989696;
   background: none;
   border: none;
@@ -421,6 +421,9 @@ button:focus {
 }
 
 .blog-preview-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -431,6 +434,7 @@ button:focus {
 }
 .blog-preview {
   width: fit-content;
+  height: fit-content;
   scale: 0.8;
   background-color: #989696;
   padding: 20px;
