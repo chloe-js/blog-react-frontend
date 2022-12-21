@@ -8,8 +8,7 @@ const Blogs = ({ props }) => {
   // try and catch
 
   useEffect(() => {
-    console.log(articleId);
-    if (articleId !== articleId) {
+    if (articleId !== undefined) {
       fetch(`http://localhost:8080/user/${articleId}`)
         .then((res) => res.json())
         .then((result) => {
