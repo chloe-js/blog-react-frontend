@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -25,7 +24,7 @@ export default function Appbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      {/* <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
@@ -35,7 +34,7 @@ export default function Appbar() {
           </Typography>
          <Button color="inherit">Login</Button>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
     </div>
   );
 }

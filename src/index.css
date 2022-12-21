@@ -1,3 +1,8 @@
+html {
+  background-image: linear-gradient(#101010, #2d2d2f);
+  height: 100vh;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +16,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title {
+  font-family: "Alternity", sans-serif;
+}
+
+.main {
+  font-size: 150px;
+  color: #35b6b7;
+}
+
+.topbar-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  color: white;
+}
+
+.topbar-list-holder {
+  align-self: center;
+}
+
+.topbar {
+  display: flex;
+  background-color: #181818;
+}
+
+span {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@import url("https://fonts.cdnfonts.com/css/alternity");
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.grid-item {
+  padding: 20px;
+}
+
+.container {
+  max-width: 80vw;
+  background-color: #181818;
+}
+
