@@ -49,8 +49,9 @@ export default function EditBlog() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user), // converts JS object to JSON string
     })
-      .then((data) => {
-        console.log(data);
+      /*.then((response) => response.json())*/
+      .then((/*data*/) => {
+        /*onNewPost(data);*/
         navigate("/");
       })
       .catch((error) => {

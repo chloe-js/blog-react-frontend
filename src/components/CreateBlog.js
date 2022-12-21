@@ -31,9 +31,9 @@ export default function CreateBlog() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user), // converts JS object to JSON string
     })
-      .then((response) => response.json())
-      .then((data) => {
-        onNewPost(data);
+      /*.then((response) => response.json())*/
+      .then((/*data*/) => {
+        /*onNewPost(data);*/
         navigate("/");
       })
       .catch((error) => {
@@ -49,9 +49,9 @@ export default function CreateBlog() {
       });
   }, []);
 
-  function onNewPost(post) {
+  /*function onNewPost(post) {
     setPosts([...posts, post]);
-  }
+  }*/
 
   return (
     <div className="form-outside">
