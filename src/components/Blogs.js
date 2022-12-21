@@ -8,11 +8,14 @@ const Blogs = ({ props }) => {
   // try and catch
 
   useEffect(() => {
-    fetch(`http://localhost:8080/user/${articleId}`)
-      .then((res) => res.json())
-      .then((result) => {
-        setPost(result);
-      });
+    console.log(articleId);
+    if (articleId !== articleId) {
+      fetch(`http://localhost:8080/user/${articleId}`)
+        .then((res) => res.json())
+        .then((result) => {
+          setPost(result);
+        });
+    }
   }, []);
 
   return props === undefined ? (

@@ -338,7 +338,7 @@ button:focus {
   position: absolute;
   left: 90%;
   top: 5%;
-  width: 15px;
+  width: fit-content;
   height: 20px;
   color: #35b6b7;
   background: none;
@@ -348,7 +348,7 @@ button:focus {
 
 .big-button {
   position: absolute;
-  left: 95%;
+  left: calc(100% - 80px);
   top: 0%;
   font-size: 60px;
   color: #989696;
