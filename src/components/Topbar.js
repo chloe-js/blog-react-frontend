@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import Homepage from "./Homepage";
 import CreateBlog from "./CreateBlog";
 import EditBlog from "./EditBlog";
+
 export default function Topbar() {
   return (
     <BrowserRouter>
@@ -20,6 +21,33 @@ export default function Topbar() {
               <span>/</span>
               <li>
                 <Link to="/create">Create</Link>
+              </li>
+              <span>/</span>
+              <li>
+                <a href="https://www.twitter.com">
+                  <img
+                    src={process.env.PUBLIC_URL + "/twitter-24.png"}
+                    className="social-icon"
+                  ></img>
+                </a>
+              </li>
+              <span>/</span>
+              <li>
+                <a href="https://www.tiktok.com">
+                  <img
+                    src={process.env.PUBLIC_URL + "/tiktok-24.png"}
+                    className="social-icon"
+                  ></img>
+                </a>
+              </li>
+              <span>/</span>
+              <li>
+                <a href="https://www.instagram.com">
+                  <img
+                    src={process.env.PUBLIC_URL + "/instagram-24.png"}
+                    className="social-icon"
+                  ></img>
+                </a>
               </li>
             </ul>
           </nav>

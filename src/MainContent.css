@@ -81,7 +81,8 @@ a:hover {
 
 .topbar-list-holder {
   align-self: center;
-  margin-left: calc(71vw - 250px);
+  position: fixed;
+  left: calc(80vw - 416px);
   z-index: 2;
 }
 
@@ -328,12 +329,12 @@ button:focus {
 }
 
 .newsletter-email {
-  background-color: #e6e5e5;
-  color: #939393;
+  background-color: #cecccc;
+  color: #989696;
 }
 
 .newsletter-email::placeholder {
-  color: #939393;
+  color: #989696;
 }
 
 .x-button {
@@ -361,4 +362,14 @@ button:focus {
   color: #e6e5e5 !important;
   width: fit-content !important;
   margin-top: 40px;
+}
+
+.social-icon {
+  margin-top: 4px;
+  width: 15px;
+}
+
+.social-icon:hover {
+  filter: invert(43%) sepia(6%) saturate(107%) hue-rotate(202deg)
+    brightness(95%) contrast(89%);
 }
