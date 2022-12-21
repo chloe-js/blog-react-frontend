@@ -39,7 +39,7 @@ export default function Slider({ posts }) {
                   </div>
                   <div className="slider-text">
                     <div>
-                      <p className="-username">{post.name}</p>
+                      <p className="-username">By {post.name}</p>
                       <time className="-date">
                         {formattedDateAndTimeArray[i]}
                       </time>

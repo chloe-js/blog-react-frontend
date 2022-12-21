@@ -1,6 +1,7 @@
 import "../MainContent.css";
 
 import { Link } from "react-router-dom";
+import Newsletter from "./Newsletter";
 export default function MainContent({ posts }) {
   let firstPost;
   if (posts.length !== 0) {
@@ -10,6 +11,7 @@ export default function MainContent({ posts }) {
     <div>
       {firstPost !== "" ? (
         <article>
+          <Newsletter />
           <Link to={"/article/" + firstPost.id} className="main-holder">
             <div>
               <div className="main-title-holder">

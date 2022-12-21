@@ -292,3 +292,73 @@ button:focus {
 .-main:hover {
   color: #227676;
 }
+
+.newsletter-holder {
+  display: flex;
+  position: fixed;
+  width: 450px;
+  height: 250px;
+  background-color: #e6e5e5;
+  border-radius: 10px;
+  top: calc(95vh - 250px);
+  left: calc(95vw - 450px);
+  margin-right: 50px;
+  justify-content: center;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.newsletter-form {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter-page {
+  position: fixed;
+  margin-top: -15vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+.newsletter-email {
+  background-color: #e6e5e5;
+  color: #939393;
+}
+
+.newsletter-email::placeholder {
+  color: #939393;
+}
+
+.x-button {
+  position: absolute;
+  left: 90%;
+  top: 5%;
+  width: 15px;
+  height: 20px;
+  color: #35b6b7;
+  background: none;
+  border-radius: 100%;
+  border: none;
+  font-size: 20px;
+}
+
+.x-button:hover {
+  cursor: pointer;
+}
+
+.newsletter-title {
+  color: #35b6b7;
+}
+
+.button-small {
+  color: #e6e5e5 !important;
+  width: fit-content !important;
+  margin-top: 40px;
+}
