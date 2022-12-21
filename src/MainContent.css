@@ -288,14 +288,12 @@ button:focus {
 }
 
 .-main {
-  color: #535355;
+  background-color: #181818;
   align-self: flex-end;
   margin-left: -50px;
-  padding-bottom: 15px;
-}
-
-.-main:hover {
-  color: black;
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .newsletter-holder {

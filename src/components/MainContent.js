@@ -38,7 +38,7 @@ export default function MainContent({ posts }) {
               className="main-image"
             ></img>
           </div>
-          <Link to={"/edit/" + firstPost.id} className="-main">
+          <Link to={"/edit/" + firstPost.id} className="-main edit">
             Edit
           </Link>
         </article>
