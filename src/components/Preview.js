@@ -22,11 +22,8 @@ export default function Preview({ props }) {
         type="button"
         onClick={openModal}
       ></input>
-      <div className="blog-preview-holder">
+      <div className="blog-preview-holder" onClick={closeModal}>
         <div className="blog-preview">
-          <button onClick={closeModal} className="big-button">
-            x
-          </button>
           <Blogs props={props} />
         </div>
       </div>

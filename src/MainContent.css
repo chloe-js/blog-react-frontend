@@ -344,16 +344,6 @@ button:focus {
   font-size: 20px;
 }
 
-.big-button {
-  position: absolute;
-  left: calc(100% - 60px);
-  top: 5px;
-  font-size: 40px;
-  color: #989696;
-  background: none;
-  border: none;
-}
-
 .big-button:hover {
   color: #565555;
   cursor: pointer;
@@ -430,7 +420,7 @@ button:focus {
   top: 0;
   left: 0;
   z-index: 3;
-  background-color: rgb(0, 0, 0, 0);
+  background-color: #181818c7;
 }
 .blog-preview {
   width: fit-content;
