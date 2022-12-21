@@ -10,9 +10,9 @@ export default function MainContent({ posts }) {
   return (
     <div>
       {firstPost !== "" ? (
-        <article>
+        <article className="main-holder">
           <Newsletter />
-          <Link to={"/article/" + firstPost.id} className="main-holder">
+          <Link to={"/article/" + firstPost.id}>
             <div>
               <div className="main-title-holder">
                 <h1 className="main-title">{firstPost.title}</h1>
@@ -30,17 +30,16 @@ export default function MainContent({ posts }) {
                 </time>
               </div>
             </div>
-
-            <div className="main-image-holder">
-              <img
-                alt={firstPost.title + " image"}
-                src={firstPost.imageSrc}
-                className="main-image"
-              ></img>
-            </div>
-            <Link to={"/edit/" + firstPost.id} className="-main">
-              Edit
-            </Link>
+          </Link>
+          <div className="main-image-holder">
+            <img
+              alt={firstPost.title + " image"}
+              src={firstPost.imageSrc}
+              className="main-image"
+            ></img>
+          </div>
+          <Link to={"/edit/" + firstPost.id} className="-main">
+            Edit
           </Link>
         </article>
       ) : (
