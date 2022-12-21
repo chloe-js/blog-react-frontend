@@ -387,7 +387,7 @@ button:focus {
 
 .blog-image {
   align-items: center;
-  max-width: 1000px;
+  max-width: 40vw;
   max-height: 700px;
 }
 
