@@ -16,7 +16,8 @@ export default function CreateBlog() {
   const [posts, setPosts] = useState([]);
 
   function onPreview() {
-    const prop = { title, name, review, imageSrc };
+    const lastUpdate = Date.now();
+    const prop = { title, name, review, imageSrc, lastUpdate };
     setPost(prop);
   }
 
