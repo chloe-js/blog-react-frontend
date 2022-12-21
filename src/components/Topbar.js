@@ -24,7 +24,11 @@ export default function Topbar() {
               </li>
               <span>/</span>
               <li>
-                <a href="https://www.twitter.com">
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={process.env.PUBLIC_URL + "/twitter-24.png"}
                     className="social-icon"
@@ -33,7 +37,11 @@ export default function Topbar() {
               </li>
               <span>/</span>
               <li>
-                <a href="https://www.tiktok.com">
+                <a
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={process.env.PUBLIC_URL + "/tiktok-24.png"}
                     className="social-icon"
@@ -42,7 +50,11 @@ export default function Topbar() {
               </li>
               <span>/</span>
               <li>
-                <a href="https://www.instagram.com">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={process.env.PUBLIC_URL + "/instagram-24.png"}
                     className="social-icon"
