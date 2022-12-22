@@ -305,9 +305,10 @@ button:focus {
   color: #35b6b7;
   border-radius: 4px;
   text-align: end;
-  margin-left: -39px;
-  background-color: #181818;
+  margin-left: -40px;
+  background-color: #232324;
   padding: 3px;
+  border-top-right-radius: 0px;
   padding-bottom: 0px;
 }
 
