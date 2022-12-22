@@ -7,6 +7,11 @@ export default function Newsletter() {
     setIsOpen(false);
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsOpen(false);
+  };
+
   //openmodel function
 
   return (
@@ -21,7 +26,7 @@ export default function Newsletter() {
             <h1 className="newsletter-title">Subscribe to our Newsletter</h1>
           </div>
           <div className="newsletter-form-holder">
-            <form className="newsletter-form">
+            <form className="newsletter-form" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Email Address"
