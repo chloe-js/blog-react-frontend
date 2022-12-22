@@ -10,6 +10,7 @@ export default function Newsletter() {
   }
 
   const handleSubmit = (e) => {
+    console.log(email);
     e.preventDefault();
     axios
       .post("/api/newsletter", { email })
