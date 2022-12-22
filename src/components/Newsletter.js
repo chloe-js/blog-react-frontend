@@ -10,10 +10,14 @@ export default function Newsletter() {
   }
 
   const handleSubmit = (e) => {
-    console.log(email);
     e.preventDefault();
-    axios
-      .post("/api/newsletter", { email })
+    const useEmail = { email };
+    console.log(useEmail);
+    fetch("http://localhost:8080/email/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(useEmail), // converts JS object to JSON string
+    })
       .then((response) => {
         console.log(response);
       })
