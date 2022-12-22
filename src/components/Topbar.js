@@ -23,7 +23,7 @@ export default function Topbar() {
               </li>
               <span>/</span>
               <li>
-                <Link to="/create">create</Link>
+                <Link to="/create">CREATE</Link>
               </li>
               <span>/</span>
               <li>
