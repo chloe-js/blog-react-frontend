@@ -66,6 +66,7 @@ ul {
 }
 .main-image {
   max-width: 600px;
+  max-height: 338px;
   border-radius: 10px;
 }
 
@@ -125,6 +126,7 @@ a:hover {
 
 .slider-main-image {
   max-width: 500px;
+  max-height: 282px;
   border-radius: 5px;
 }
 
