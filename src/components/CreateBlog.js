@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Preview from "./Preview";
 
 export default function CreateBlog() {
@@ -13,8 +13,8 @@ export default function CreateBlog() {
   const [post, setPost] = useState("");
 
   function onPreview() {
-    const lastUpdate = Date.now();
-    const prop = { title, name, review, imageSrc, lastUpdate };
+    const updateAt = Date.now();
+    const prop = { title, name, review, imageSrc, updateAt };
     setPost(prop);
   }
 

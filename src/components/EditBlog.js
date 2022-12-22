@@ -35,8 +35,8 @@ export default function EditBlog() {
   };
 
   function onPreview() {
-    const lastUpdate = Date.now();
-    const prop = { title, name, review, imageSrc, lastUpdate };
+    const updateAt = Date.now();
+    const prop = { title, name, review, imageSrc, updateAt };
     setPost(prop);
   }
   // pass the event and prevent default value and print name and address to the console

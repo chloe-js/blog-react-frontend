@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Blogs = ({ props }) => {
   const [post, setPost] = useState("");
@@ -28,7 +28,7 @@ const Blogs = ({ props }) => {
               <h2 className="blog-user">{post.name}</h2>
 
               <time className="-date">
-                {new Date(post.lastUpdate).toLocaleDateString("en-GB", {
+                {new Date(post.updateAt).toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
@@ -36,7 +36,7 @@ const Blogs = ({ props }) => {
               </time>
               <br></br>
               <time className="-date">
-                {new Date(post.lastUpdate).toLocaleTimeString("en-GB", {
+                {new Date(post.updateAt).toLocaleTimeString("en-GB", {
                   hour: "2-digit",
                   minute: "2-digit",
                 })}

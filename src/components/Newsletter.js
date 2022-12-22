@@ -11,7 +11,6 @@ export default function Newsletter() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const useEmail = { email };
-    console.log(useEmail);
     fetch("http://localhost:8080/email/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

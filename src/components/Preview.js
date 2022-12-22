@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import Blogs from "./Blogs";
 
 export default function Preview({ props }) {

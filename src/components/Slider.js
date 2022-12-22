@@ -6,7 +6,7 @@ export default function Slider({ posts }) {
   let formattedDateAndTimeArray = [];
   postsReversed.forEach((post) => {
     formattedDateAndTimeArray.push(
-      new Date(post.lastUpdate).toLocaleDateString("en-GB", {
+      new Date(post.updateAt).toLocaleDateString("en-GB", {
         year: "numeric",
         month: "long",
         day: "numeric",

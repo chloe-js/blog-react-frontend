@@ -22,14 +22,11 @@ export default function MainContent({ posts }) {
                 </div>
                 <div className="date-holder">
                   <time className="-date">
-                    {new Date(firstPost.lastUpdate).toLocaleDateString(
-                      "en-GB",
-                      {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      }
-                    )}
+                    {new Date(firstPost.updateAt).toLocaleDateString("en-GB", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                   </time>
                 </div>
               </div>
