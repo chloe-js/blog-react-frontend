@@ -12,9 +12,6 @@ export default function CreateBlog() {
   const [imageSrc, setImageSrc] = useState("");
   const [post, setPost] = useState("");
 
-  // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
-  const [posts, setPosts] = useState([]);
-
   function onPreview() {
     const lastUpdate = Date.now();
     const prop = { title, name, review, imageSrc, lastUpdate };
@@ -42,13 +39,6 @@ export default function CreateBlog() {
       });
   };
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
-  useEffect(() => {
-    fetch("http://localhost:8080/user/getAll")
-      .then((res) => res.json())
-      .then((result) => {
-        setPosts(result);
-      });
-  }, []);
 
   /*function onNewPost(post) {
     setPosts([...posts, post]);

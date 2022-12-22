@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function Newsletter() {
   const [isOpen, setIsOpen] = useState(true);
+  const [email, setEmail] = useState("");
 
   function closeModal() {
     setIsOpen(false);
@@ -9,6 +11,14 @@ export default function Newsletter() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .post("/api/newsletter", { email })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
     setIsOpen(false);
   };
 
@@ -31,6 +41,8 @@ export default function Newsletter() {
                 type="text"
                 placeholder="Email Address"
                 className="newsletter-email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               ></input>
               <input
                 type="submit"
