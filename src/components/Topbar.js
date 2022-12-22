@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import Homepage from "./Homepage";
 import CreateBlog from "./CreateBlog";
 import EditBlog from "./EditBlog";
+import Blogs from "./Blogs";
 export default function Topbar() {
   return (
     <BrowserRouter>
@@ -31,7 +32,7 @@ export default function Topbar() {
         <Route
           exact
           path="/article/:articleId"
-          element={<CreateBlog />}
+          element={<Blogs />}
         ></Route>
         <Route exact path="/edit/:articleId" element={<EditBlog />}></Route>
       </Routes>

@@ -113,6 +113,8 @@ a:hover {
 
 .slider-main-image {
   max-width: 500px;
+  max-height: 250px;
+  align-content: center;
   border-radius: 5px;
 }
 
@@ -124,6 +126,7 @@ a:hover {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .slider-title {
@@ -291,4 +294,46 @@ button:focus {
 
 .-main:hover {
   color: #227676;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 30px;
+}
+
+.blog-image {
+  align-items: center;
+  max-width: 1000px;
+  max-height: 700px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.blog-title {
+  font-size: 70px;
+}
+
+.blog-user {
+  font-size: 30px;
+}
+
+.blog-time {
+  font-size: 30px;
+}
+
+.blog-top {
+  background-color: rgb(53, 53, 53);
+}
+
+.blog-preview {
+  position: fixed;
 }

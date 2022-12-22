@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Preview from "./Preview";
 
 export default function CreateBlog() {
   const navigate = useNavigate();
@@ -9,9 +10,13 @@ export default function CreateBlog() {
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [imageSrc, setImageSrc] = useState("");
+  const props = [title, name, review, imageSrc]
 
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
   const [posts, setPosts] = useState([]);
+
+  console.log(title)
+  
   /*for Damien to work with
   const [post, setPost] = useState("");
   const { articleId } = useParams();
@@ -29,7 +34,7 @@ export default function CreateBlog() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { name, review, title, imageSrc };
-    //console.log(user);
+
     //save this data into the database === springboot application and xampp server and run. this route (localhost:8080/user/add) saves the data and we can use this to access it in our app
     // using the api call from react === need FETCH(azure library) !!!! CORS will block communication between local hosts === UserController in Java === @CrossOrigin //this will tell springboot application to connect to other applications
     fetch("http://localhost:8080/user/add", {
@@ -43,7 +48,7 @@ export default function CreateBlog() {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
   // allUsers data displayed into our react application === need Hook USE EFFECT, FETCH and USE STATE
@@ -117,6 +122,8 @@ export default function CreateBlog() {
           </div>
         </form>
       </section>
+      <Preview 
+      props={props}/>
     </div>
   );
 }
