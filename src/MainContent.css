@@ -47,8 +47,8 @@ ul {
 
 .main-holder {
   display: flex;
-
-  justify-content: center;
+  width: 85vw;
+  justify-content: space-around;
   padding: 10px;
   margin-top: 40px;
   text-align: left;
@@ -61,14 +61,12 @@ ul {
   justify-content: center;
   background-image: linear-gradient(#181818, #232324);
 }
+.main-text-holder {
+  width: 311px;
+}
 .main-image {
   max-width: 600px;
   border-radius: 10px;
-}
-
-.main-title-holder {
-  width: 600px;
-  margin-right: 20px;
 }
 
 .main-title {
@@ -295,13 +293,23 @@ button:focus {
   color: #103a3a;
 }
 
+.main-link-holder {
+  display: flex;
+  justify-content: end;
+  justify-content: space-around;
+}
+
 .-main {
-  margin-left: 95.5%;
   color: #35b6b7;
   align-self: flex-end;
-  padding: 5px;
-  left: 50%;
-  border-radius: 5px;
+  padding-right: 12px;
+  border-radius: 4px;
+  margin-left: 560px;
+  text-align: end;
+}
+
+.width311 {
+  width: 311px;
 }
 
 .-main:hover {

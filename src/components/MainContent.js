@@ -13,8 +13,8 @@ export default function MainContent({ posts }) {
         <article className="main-holder-cover">
           <div className="main-holder-fake">
             <Link to={"/article/" + firstPost.id} className="main-holder">
-              <div>
-                <div className="main-title-holder">
+              <div className="main-text-holder">
+                <div>
                   <h1 className="main-title">{firstPost.title}</h1>
                 </div>
                 <div className="username-holder">
@@ -42,9 +42,12 @@ export default function MainContent({ posts }) {
                 ></img>
               </div>
             </Link>
-            <Link to={"/edit/" + firstPost.id} className="-main">
-              Edit
-            </Link>
+            <div className="main-link-holder">
+              <div className="width311"></div>
+              <Link to={"/edit/" + firstPost.id} className="-main">
+                Edit
+              </Link>
+            </div>
           </div>
         </article>
       ) : (
