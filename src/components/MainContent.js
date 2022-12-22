@@ -37,14 +37,11 @@ export default function MainContent({ posts }) {
                   src={firstPost.imageSrc}
                   className="main-image"
                 ></img>
+                <Link to={"/edit/" + firstPost.id} className="-main">
+                  Edit
+                </Link>
               </div>
             </Link>
-            <div className="main-link-holder">
-              <div className="width311"></div>
-              <Link to={"/edit/" + firstPost.id} className="-main">
-                Edit
-              </Link>
-            </div>
           </div>
         </article>
       ) : (
