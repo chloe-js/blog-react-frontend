@@ -468,6 +468,5 @@ button:focus {
 .sticky-element {
   position: sticky;
   top: 0; /* stick the element to the top of the screen */
-  left: 0; /* stick the element to the left side of the screen */
-  width: 100%; /* make the element span the full width of the screen */
+  left: 0; /* stick the element to the left side of the screen */ /* make the element span the full width of the screen */
 }
