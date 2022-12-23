@@ -108,7 +108,7 @@ a:hover {
   background-color: #181818;
   height: 10vh;
   width: 100vw;
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
 }
 
 .slider-main {
@@ -463,4 +463,11 @@ button:focus {
 
 .blog-holder {
   background-color: #232324;
+}
+
+.sticky-element {
+  position: sticky;
+  top: 0; /* stick the element to the top of the screen */
+  left: 0; /* stick the element to the left side of the screen */
+  width: 100%; /* make the element span the full width of the screen */
 }

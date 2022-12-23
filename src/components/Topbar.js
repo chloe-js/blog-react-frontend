@@ -9,7 +9,7 @@ import Blogs from "./Blogs";
 export default function Topbar() {
   return (
     <BrowserRouter>
-      <div className="topbar-holder">
+      <div className="topbar-holder sticky-element">
         <div className="topbar">
           <Link to="/" className="title main prevent-select">
             bitBYTEbit
