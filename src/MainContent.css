@@ -48,7 +48,7 @@ ul {
 .main-holder {
   display: flex;
   width: 85vw;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 10px;
   margin-top: 40px;
   text-align: left;
